@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import {defineConfig, passthroughImageService} from 'astro/config';
 import starlight from '@astrojs/starlight';
 
 import cloudflare from '@astrojs/cloudflare';
@@ -33,4 +33,7 @@ export default defineConfig({
           enabled: true
       }
   }),
+    image: {
+      service: passthroughImageService()
+    }
 });
