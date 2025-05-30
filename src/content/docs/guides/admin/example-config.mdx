@@ -1,0 +1,39 @@
+---
+title: Configuration
+---
+
+# Config Details
+starting out the plugin has a `config.yml` file,
+in the `config.yml` file there will be sections you can define yourself.
+
+sections include: <br/>
+`blocked-words`: a list of words to be blocked. <br/>
+`punish-type`: the type of punishment for using a blocked word. <br/>
+`ban-duration`: how long the user should be banned for. <br/>
+`warn`/`kick`/`ban`-`message`: the message for each respective action. <br/>
+
+the options for each section are: <br/>
+`blocked-words`: a list of words <br/>
+`punish-type`: `WARN`/`KICK`/`BAN` <br/>
+`ban-duration`: `Time`s/m/h/d <br/>
+`warn`/`kick`/`ban`-`message`: the message for each respective type <br/>
+
+# Example Config
+```yaml
+## These words are Case-insensitive.
+blocked-words:
+- words
+- that
+- should
+- be
+- blocked
+
+punish-type: WARN
+
+## ban-duration will only be used when punish-type is set to BAN
+ban-duration: 1h
+
+warn-message: You've been Warned!
+kick-message: You've been Kicked!
+ban-message: You've been Banned!
+```
